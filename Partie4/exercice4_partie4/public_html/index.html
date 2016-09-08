@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <title>Exercice 4 </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="assets/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="form.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form>
+            <label for="nom">Nom</label><input type="text" id="nom" name="nom">
+            <label for="prenom">Prenom</label><input type="text" id="prenom" name="prenom">
+            <label for="date_de_naissance">Date de naissance</label><input type="text" id="date_de_naissance" name="date_de_naissance">
+            <label for="emploi">Emploi</label><input type="text" id="emploi" name="emploi">
+            <label for="societe">Societé</label><input type="text" id="societe" name="societe">
+            <a href="#" class="btn btn-info" id="generer">Generer</a>
+        </form>
+        <script>
+            $(document).ready(function () {
+                $('#generer').click(function () {
+                    var cForm = new Form;
+                    cForm.nom = $('#nom').val();
+                    cForm.prenom = $('#prenom').val();
+                    cForm.date_de_naissance = $('#date_de_naissance').val();
+                    cForm.emploi = $('#emploi').val();
+                    cForm.societe = $('#societe').val();
+                    cForm.concatenation();
+                    cForm.checkLetters(cForm.nom);
+                    alert(cForm.concatenation());
+                });
+            });
+        </script>
+    </body>
+</html>

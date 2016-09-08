@@ -1,0 +1,13 @@
+{
+  "name": "exercice2_partie4_jquery",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6"
+  },
+  "devDependencies": {}
+}
